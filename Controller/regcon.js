@@ -2,19 +2,18 @@ const Details= require('../Model/regmodel');
 
 exports.create= function(req,res)
 {
-    const newRegi= new Details({
+    const newregi= new Details({
 
-        first_name: req.body.firstname,
+        first_name: req.body.first_name,
 
-        last_name: req.body.lastname,
+        last_name: req.body.last_name,
     
-        email: req.body.email,
-    
-        mobile: req.body.mobile
+        email: req.body.email
     });
 
-    newRegi.save(function(err,data){
+    newregi.save(function(err,data){
         res.send(data);
+        
     })
 }
 

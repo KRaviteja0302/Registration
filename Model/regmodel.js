@@ -6,9 +6,7 @@ const Regischema= new schema({
 
     last_name: String,
 
-    email:String,
-
-    mobile:Number
+    email:String
 
 })
 

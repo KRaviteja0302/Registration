@@ -4,7 +4,7 @@ const mongoose= require('mongoose');
 
 const bodyparser= require('body-parser');
 
-const Registration= require('./Controller/regcon.js');
+const regis= require('./Controller/regcon.js');
 
 const port = process.env.PORT || 3000;
 
@@ -18,8 +18,8 @@ app.use(bodyparser.urlencoded({
     extended:true
 }))
 
-app.post('/Registration/newregistration',Registration.create);
-app.get('/Registration/getallregistrationdetails',Registration.getdetails);
+app.post('/regis/newreg',regis.create);
+app.get('/regis/getall',regis.getdetails);
 
 mongoose.connect('process.env.DB_CONNECTION',{
     useNewUrlParser: true,useUnifiedTopology: true
